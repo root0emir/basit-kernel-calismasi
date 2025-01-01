@@ -104,7 +104,7 @@ int calculate(int num1, int num2, char op) {
                 result = num1 / num2;
             } else {
                 print_string("Error: Division by zero.\n");
-                return -1;  // Bölme hatası
+                return -1; 
             }
             break;
         default:
@@ -127,7 +127,7 @@ void run_calculator() {
 
     print_string("Enter operator (+, -, *, /): ");
     char op;
-    op = __inb(0x60);  // Bir karakter oku (operatör)
+    op = __inb(0x60); 
 
     print_string("Enter second number: ");
     char num2_str[MAX_INPUT_LENGTH];
@@ -141,7 +141,7 @@ void run_calculator() {
     if (result != -1) {
         print_string("Result: ");
         char result_str[20];
-        itoa(result, result_str, 10);  // Sayıyı string'e dönüştür
+        itoa(result, result_str, 10);  
         print_string(result_str);
         print_string("\n");
     }
